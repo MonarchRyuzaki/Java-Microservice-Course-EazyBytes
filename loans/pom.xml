@@ -8,10 +8,10 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>accounts</artifactId>
+    <artifactId>loans</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>accounts</name>
-    <description>accounts</description>
+    <name>loans</name>
+    <description>loans</description>
     <url/>
     <licenses>
         <license/>
