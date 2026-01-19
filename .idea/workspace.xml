@@ -5,33 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="501da684-199b-462e-a5bd-befc4038f7e9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cards/src/main/java/com/eazybytes/cards/controller/CardsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cards/src/main/java/com/eazybytes/cards/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cards/src/main/java/com/eazybytes/cards/entity/Cards.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cards/src/main/resources/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loans/src/main/java/com/eazybytes/loans/audit/AuditAwareImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loans/src/main/java/com/eazybytes/loans/constants/LoansConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loans/src/main/java/com/eazybytes/loans/controller/LoansController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loans/src/main/java/com/eazybytes/loans/dto/ErrorResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loans/src/main/java/com/eazybytes/loans/dto/LoansDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loans/src/main/java/com/eazybytes/loans/dto/ResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loans/src/main/java/com/eazybytes/loans/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loans/src/main/java/com/eazybytes/loans/entity/Loans.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loans/src/main/java/com/eazybytes/loans/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loans/src/main/java/com/eazybytes/loans/exception/LoanAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loans/src/main/java/com/eazybytes/loans/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loans/src/main/resources/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/EazyBank.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +20,7 @@
         <option value="Interface" />
         <option value="Exception" />
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -83,7 +60,9 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Maven.accounts [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.accounts [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.accounts [package].executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;New/updated database configurations found&quot;,
     &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
@@ -97,6 +76,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Spring Boot.AccountsApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.CardsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.LoansApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/ryuzaki/IdeaProjects/EazyBank&quot;,
@@ -126,6 +106,17 @@
         <option value="QuarkusRunConfigurationType" />
         <option value="SpringBootApplicationConfigurationType" />
       </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="LoansApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.LoansApplication">
@@ -178,7 +169,11 @@
       <workItem from="1768456362315" duration="3164000" />
       <workItem from="1768462353798" duration="773000" />
       <workItem from="1768569393011" duration="1774000" />
-      <workItem from="1768571204132" duration="6366000" />
+      <workItem from="1768571204132" duration="6726000" />
+      <workItem from="1768635117502" duration="746000" />
+      <workItem from="1768635883500" duration="382000" />
+      <workItem from="1768669029976" duration="2000" />
+      <workItem from="1768802414866" duration="758000" />
     </task>
     <servers />
   </component>
