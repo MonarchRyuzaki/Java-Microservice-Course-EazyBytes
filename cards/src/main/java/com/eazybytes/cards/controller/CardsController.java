@@ -1,6 +1,7 @@
 package com.eazybytes.cards.controller;
 
 import com.eazybytes.cards.constants.CardsConstants;
+import com.eazybytes.cards.dto.CardsContactsDTO;
 import com.eazybytes.cards.dto.CardsDTO;
 import com.eazybytes.cards.dto.ErrorResponseDTO;
 import com.eazybytes.cards.dto.ResponseDTO;
@@ -14,6 +15,8 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +25,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@AllArgsConstructor
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @Validated
 @Tag(
@@ -32,6 +34,26 @@ import org.springframework.web.bind.annotation.*;
 public class CardsController {
 
     private ICardsService iCardsService;
+
+    public CardsController(ICardsService iCardsService) {
+        this.iCardsService = iCardsService;
+    }
+
+    @Value("${build.version}")
+    private String buildVersion;
+
+    @Autowired
+    private CardsContactsDTO cardsContacts;
+
+    @GetMapping("/build-info")
+    public ResponseEntity<String> getBuildVersion() {
+        return ResponseEntity.ok(buildVersion);
+    }
+
+    @GetMapping("/contact-info")
+    public ResponseEntity<CardsContactsDTO> getContactInfo() {
+        return ResponseEntity.ok(cardsContacts);
+    }
 
     @Operation(
             summary = "Create Card REST API",
