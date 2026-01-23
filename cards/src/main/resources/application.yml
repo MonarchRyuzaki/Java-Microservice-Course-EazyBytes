@@ -14,18 +14,10 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update
+  profiles:
+    active: prod
+  config:
+    import: "optional:configserver:http://localhost:8071"
 
 server:
   port: 9000
-
-build:
-  version: "3.0"
-
-cards:
-  message: "Welcome to EazyBank cards related local APIs "
-  contactDetails:
-    name: "Dragos Lech - Developer"
-    email: "dragos@eazybank.com"
-  onCallSupport:
-    - (412) 419-3491
-    - (915) 382-1932
