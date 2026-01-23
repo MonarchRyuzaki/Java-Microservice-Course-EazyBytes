@@ -14,12 +14,6 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update
-  config:
-    import:
-      - application_qa.yml
-      - application_prod.yml
-  profiles:
-    active: qa
 
 server:
   port: 9000
