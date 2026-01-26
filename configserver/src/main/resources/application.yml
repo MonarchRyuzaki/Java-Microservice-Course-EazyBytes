@@ -4,9 +4,35 @@ spring:
   application:
     name: configserver
   profiles:
-    active: native
+    active: git
+  #    active: native
   cloud:
     config:
       server:
-        native:
-          search-locations: "classpath:/config"
+#        native:
+#          search-locations: "classpath:/config"
+        git:
+          uri: https://github.com/eazybytes/eazybytes-config.git
+          clone-on-start: true
+          force-pull: true
+          timeout: 5
+          default-label: main
+
+encrypt:
+  key: "45D81EC1EF61DF9AD8D3E5BB397F9"
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
